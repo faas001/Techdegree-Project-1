@@ -4,22 +4,17 @@
 var quotes = [
     {quote: 'Don\'t find blame. Find a remedy; anybody can complain.', 
      source: 'Henry Ford', 
-     citation: '', 
      year: '1922',
      tags: 'Business'
     },
 
     {quote: 'Anyone who stops learning is old, whether at twenty or eighty. Anyone who keeps learning stays young.', 
      source: 'Henry Ford', 
-     citation: '', 
-     year: '',
      tags: 'Education'
     },
 
     {quote: 'I played the game one way. I gave it everything I had. It doesn’t take any ability to hustle.',
      source: 'Wade Boggs', 
-     citation: '', 
-     year: '',
      tags: 'Motivation'
     },
 
@@ -46,8 +41,6 @@ var quotes = [
 
     {quote: 'The most rewarding things you do in life are often the ones that look like they cannot be done.', 
      source: 'Arnold Palmer', 
-     citation: '', 
-     year: '',
      tags: 'Motivation'
     },
 
@@ -85,7 +78,7 @@ function getRandomQuote(array) {
     while (getNewQ === LastRandom) {
         getNewQ = Math.floor(Math.random() * array.length); 
     } 
-    // set the global LastRandom variable to use on next button click
+    // set the global LastRandom variable to use on next getRandomQuote function call
     LastRandom = getNewQ;
     console.log(getNewQ);
 
@@ -104,13 +97,13 @@ function printQuote() {
     message += '<p class="source">' + newQ.source;
 
     // The optional properties are tested for non blanks and added to message string if true
-    if (newQ.citation != '') {
+    if (newQ.citation) {
         message += '<span class="citation">' + newQ.citation + '</span>';
     }  
-    if (newQ.year != '') {    
+    if (newQ.year) {    
         message += '<span class="year">' + newQ.year + '</span>';
     }
-    if (newQ.tags != '') {
+    if (newQ.tags) {
         message += '<span class="tags">' + newQ.tags + '</span>';
     }
     message += '</p>'
