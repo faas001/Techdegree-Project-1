@@ -49,6 +49,13 @@ var quotes = [
      citation: 'Letter to Rev. Richard Price', 
      year: '1782',
      tags: 'Business'
+    },
+
+    {quote: 'I must not fear. Fear is the mind-killer. Fear is the little-death that brings total obliteration. I will face my fear.', 
+     source: 'Bene-Gesserit', 
+     citation: 'Frank Herbert, Dune', 
+     year: '1965',
+     
     }
 ]
 
